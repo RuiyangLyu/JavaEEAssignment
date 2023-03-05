@@ -13,7 +13,7 @@
     }
 %>
 <span class="msg"><%=msg%></span>
-<h1>新建课程页面</h1>
+<h1>新建水闸</h1>
 <form action="AddGateServlet" method="post">
     编号：<input type="text" name="id" value="${id}"><br>
     水闸名：<input type="text" name="gatename" value="${gatename}"><br>

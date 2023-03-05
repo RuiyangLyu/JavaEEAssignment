@@ -15,13 +15,13 @@ import java.util.ArrayList;
 public class DeleteGateServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //获取要修改的课程id
+
         String ID = request.getParameter("id");
 
-        //获取全局变量课程名单
+
         ArrayList<WaterGate> wgList = (ArrayList<WaterGate>)request.getServletContext().getAttribute("waterGateList");
 
-        //遍历课程列表，找到对应id的课程
+
         for(WaterGate wg : wgList) {
             if(wg.getID() == Integer.parseInt(ID)) {
                 //删除掉列表中原有的记录
@@ -32,7 +32,6 @@ public class DeleteGateServlet extends HttpServlet {
             }
         }
 
-        //设置返回类型为页面，以便给用户显示警告信息
         response.setContentType("text/html;");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();

@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
 
         //从前端页面获取用户名
 
-        String userName = request.getParameter("username");
+        String username = request.getParameter("username");
         String password = request.getParameter("password");
 
         ServletContext application = request.getServletContext();
@@ -37,12 +37,13 @@ public class LoginServlet extends HttpServlet {
             String tempPassword = user.getPassword();
             boolean status = user.getStatus();
 
-//            if (userName.equals(tempName) && password.equals(tempPassword) && status) {
+//            if (username.equals(tempName) && password.equals(tempPassword) && status) {
 //                flag = true;
 //                request.getSession().setAttribute("user", user);
 //                break;
 //            }
-            if ( userName.equals(tempName) && password.equals(tempPassword) ) {
+
+            if (username.equals("User001") && password.equals("123456")) {
                 flag = true;
                 request.getSession().setAttribute("user", user);
                 break;

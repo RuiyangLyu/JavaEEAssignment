@@ -12,7 +12,6 @@
     }
 </style>
     <header>
-        <img width="400px" src="./commons/img/tupian.png" alt="">
     <%
         User user = (User) session.getAttribute("user");
         System.out.println(user);

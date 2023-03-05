@@ -8,9 +8,5 @@
     <listener>
         <listener-class>Listener.ServerInitListener</listener-class>
     </listener>
-    <filter>
-        <filter-name>LoginFilter</filter-name>
-        <filter-class>Filter.LoginFilter</filter-class>
-    </filter>
 
 </web-app>
